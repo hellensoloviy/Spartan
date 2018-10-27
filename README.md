@@ -19,6 +19,87 @@ Spartan is a lightweight, elegant, and easy to use Spotify Web API wrapper libra
 
  - iOS 9.0+ / macOS 10.11+
  - xCode 9.0+
+ 
+## Table of Contents
+<details>
+<summary>Show Full Table of Contents</summary>
+ 
+ * [Installation](https://github.com/Daltron/Spartan#installation)
+ 	* [CocoaPods](https://github.com/Daltron/Spartan#cocoapods)
+ * [Usage](https://github.com/Daltron/Spartan#usage)
+ 	* [Spartan Properties](https://github.com/Daltron/Spartan#spartan-properties)
+		* [Authorization Token](https://github.com/Daltron/Spartan#authorization-token)
+		* [Logging](https://github.com/Daltron/Spartan#logging)
+	* [Core](https://github.com/Daltron/Spartan#core)
+		* [PagingObject](https://github.com/Daltron/Spartan#pagingobject)
+			* [Get Next](https://github.com/Daltron/Spartan#get-next)
+			* [Get Previous](https://github.com/Daltron/Spartan#get-previous)
+		* [Requests](https://github.com/Daltron/Spartan#requests)
+			* [Get an Album](https://github.com/Daltron/Spartan#get-an-album)
+			* [Get Several Albums](https://github.com/Daltron/Spartan#get-several-albums)
+			* [Get an Album's Tracks](https://github.com/Daltron/Spartan#get-an-albums-tracks)
+			* [Get an Artist](https://github.com/Daltron/Spartan#get-an-artist)
+			* [Get Several Artists](https://github.com/Daltron/Spartan#get-several-artists)
+			* [Get a Track](https://github.com/Daltron/Spartan#get-a-track)
+			* [Get Several Tracks](https://github.com/Daltron/Spartan#get-several-tracks)
+			* [Get an Artist's Albums](https://github.com/Daltron/Spartan#get-an-artists-albums)
+			* [Get an Artist's Top Tracks](https://github.com/Daltron/Spartan#get-an-artists-top-tracks)
+			* [Get an Artist's Related Artists](https://github.com/Daltron/Spartan#get-an-artists-related-artists)
+			* [Search for Albums](https://github.com/Daltron/Spartan#search-for-albums)
+			* [Search for Artists](https://github.com/Daltron/Spartan#search-for-artists)
+			* [Search for Playlists](https://github.com/Daltron/Spartan#search-for-playlists)
+			* [Search for Tracks](https://github.com/Daltron/Spartan#search-for-tracks)
+			* [Get a User’s Profile](https://github.com/Daltron/Spartan#get-a-users-profile)
+			* [Get Audio Analysis for a Track](https://github.com/Daltron/Spartan#get-audio-analysis-for-a-track)
+			* [Get Audio Features for a Track](https://github.com/Daltron/Spartan#get-audio-features-for-a-track)
+			* [Get Audio Features for a Track](https://github.com/Daltron/Spartan#get-audio-features-for-a-track-1)
+			* [Get Audio Features for Several Tracks](https://github.com/Daltron/Spartan#get-audio-features-for-several-tracks)
+			* [Get a List of Featured Playlists](https://github.com/Daltron/Spartan#get-a-list-of-featured-playlists)
+			* [Get a List of New Releases](https://github.com/Daltron/Spartan#get-a-list-of-new-releases)
+			* [Get a List of Categories](https://github.com/Daltron/Spartan#get-a-list-of-categories)
+			* [Get a Category’s Playlists](https://github.com/Daltron/Spartan#get-a-categorys-playlists)
+			* [Get Current User’s Profile](https://github.com/Daltron/Spartan#get-current-users-profile)
+			* [Get User’s Followed Artists](https://github.com/Daltron/Spartan#get-users-followed-artists)
+			* [Follow Artists](https://github.com/Daltron/Spartan#follow-artists)
+			* [Follow Users](https://github.com/Daltron/Spartan#follow-users)
+			* [Unfollow Artists](https://github.com/Daltron/Spartan#unfollow-artists)
+			* [Unfollow Users](https://github.com/Daltron/Spartan#unfollow-users)
+			* [Check if Current User Follows Artists](https://github.com/Daltron/Spartan#check-if-current-user-follows-artists)
+			* [Check if Current User Follows Users](https://github.com/Daltron/Spartan#check-if-current-user-follows-users)
+			* [Follow a Playlist](https://github.com/Daltron/Spartan#follow-a-playlist)
+			* [Unfollow a Playlist](https://github.com/Daltron/Spartan#unfollow-a-playlist)
+			* [Get a User’s Saved Tracks](https://github.com/Daltron/Spartan#get-a-users-saved-tracks)
+			* [Save Tracks for User](https://github.com/Daltron/Spartan#save-tracks-for-user)
+			* [Remove User’s Saved Tracks](https://github.com/Daltron/Spartan#remove-users-saved-tracks)
+			* [Check User’s Saved Tracks](https://github.com/Daltron/Spartan#check-users-saved-tracks)
+			* [Get Current User’s Saved Albums](https://github.com/Daltron/Spartan#get-current-users-saved-albums)
+			* [Save Albums for User](https://github.com/Daltron/Spartan#save-albums-for-user)
+			* [Remove User’s Saved Albums](https://github.com/Daltron/Spartan#remove-users-saved-albums)
+			* [Check User’s Saved Albums](https://github.com/Daltron/Spartan#check-users-saved-albums)
+			* [Get a User’s Top Artists and Tracks](https://github.com/Daltron/Spartan#get-a-users-top-artists-and-tracks)
+			* [Check User’s Saved Albums](https://github.com/Daltron/Spartan#check-users-saved-albums-1)
+			* [Get a User’s Top Artists](https://github.com/Daltron/Spartan#get-a-users-top-artists)
+			* [Get a User’s Top Tracks](https://github.com/Daltron/Spartan#get-a-users-top-tracks)
+			* [Get a List of a User’s Playlists](https://github.com/Daltron/Spartan#get-a-list-of-a-users-playlists)
+			* [Get a List of Current User’s Playlists](https://github.com/Daltron/Spartan#get-a-list-of-current-users-playlists)
+			* [Get a Playlist](https://github.com/Daltron/Spartan#get-a-playlist)
+			* [Get a Playlist's Tracks](https://github.com/Daltron/Spartan#get-a-playlists-tracks)
+			* [Create a Playlist](https://github.com/Daltron/Spartan#create-a-playlist)
+			* [Change a Playlist’s Details](https://github.com/Daltron/Spartan#change-a-playlists-details)
+			* [Add Tracks to a Playlist](https://github.com/Daltron/Spartan#add-tracks-to-a-playlist)
+			* [Remove Tracks from a Playlist](https://github.com/Daltron/Spartan#remove-tracks-from-a-playlist)
+			* [Reorder a Playlist’s Tracks](https://github.com/Daltron/Spartan#reorder-a-playlists-tracks)
+			* [Replace a Playlist’s Tracks](https://github.com/Daltron/Spartan#replace-a-playlists-tracks)
+			* [Check if Users Follow a Playlist](https://github.com/Daltron/Spartan#check-if-users-follow-a-playlist)
+	
+	* [Handling Errors](https://github.com/hellensoloviy/Spartan#handling-errors)
+	* [Library Dependencies](https://github.com/hellensoloviy/Spartan#library-dependencies)
+	* [Usage Information and Limits](https://github.com/hellensoloviy/Spartan#usage-information-and-limits)
+	* [Author](https://github.com/hellensoloviy/Spartan#author)
+	* [License](https://github.com/hellensoloviy/Spartan#license)
+
+	
+</details>
 
 ## Installation
 
@@ -136,6 +217,8 @@ if pagingObject.canMakePreviousRequest {
 
 ### Requests
 
+
+
 #### [Get an Album](https://developer.spotify.com/web-api/get-album/)
 
 ```swift
@@ -146,6 +229,9 @@ _ = Spartan.getAlbum(id: albumId, market: .us, success: { (album) in
 })
 ```
 
+<details>
+<summary>Show full examples list</summary>
+	
 #### [Get Several Albums](https://developer.spotify.com/web-api/get-several-albums/)
 
 ```swift
@@ -696,10 +782,7 @@ _ = Spartan.getUsersAreFollowingPlaylists(ownerId: ownerId, playlistId: playlist
 }
 ```
 
-
-
-
-
+</details>
 
 
 ## Handling Errors
